@@ -1,12 +1,17 @@
 (() => {
   var __defProp = Object.defineProperty;
   var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
   var __esm = (fn, res) => function __init() {
     return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
   };
   var __export = (target, all) => {
     for (var name in all)
       __defProp(target, name, { get: all[name], enumerable: true });
+  };
+  var __publicField = (obj, key, value) => {
+    __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+    return value;
   };
 
   // node_modules/@rails/actioncable/src/adapters.js
@@ -6793,6 +6798,18 @@
   application.debug = false;
   window.Stimulus = application;
 
+  // app/javascript/controllers/counter_controller.js
+  var counter_controller_default = class extends Controller {
+    connect() {
+      this.count = 0;
+    }
+    increment() {
+      this.count += 1;
+      this.outputTarget.textContent = `JS a cliqu\xE9 sur le bouton ${this.count} fois`;
+    }
+  };
+  __publicField(counter_controller_default, "targets", ["output"]);
+
   // app/javascript/controllers/hello_controller.js
   var hello_controller_default = class extends Controller {
     connect() {
@@ -6801,6 +6818,7 @@
   };
 
   // app/javascript/controllers/index.js
+  application.register("counter", counter_controller_default);
   application.register("hello", hello_controller_default);
 })();
 //# sourceMappingURL=assets/application.js.map

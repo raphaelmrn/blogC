@@ -11,7 +11,14 @@
   </head>
 
   <body>
-  <%= render "layouts/sidebar" %>
-    <%= yield %>
+
+      <%= render "layouts/sidebar" %>
+    
+  <main class="py-10 lg:pl-72">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <%= yield %>
+    </div>
+  </main>
+
   </body>
 </html>
