@@ -6798,6 +6798,13 @@
   application.debug = false;
   window.Stimulus = application;
 
+  // app/javascript/controllers/coucou_controller.js
+  var coucou_controller_default = class extends Controller {
+    connect() {
+      console.log("coucou");
+    }
+  };
+
   // app/javascript/controllers/counter_controller.js
   var counter_controller_default = class extends Controller {
     connect() {
@@ -6813,12 +6820,34 @@
   // app/javascript/controllers/hello_controller.js
   var hello_controller_default = class extends Controller {
     connect() {
-      this.element.textContent = "Hello World!";
+      console.log("coucou");
     }
   };
 
+  // app/javascript/controllers/index_controller.js
+  var index_controller_default = class extends Controller {
+    connect() {
+      console.log("coucou");
+      this.imageStatus = true;
+    }
+    toggle() {
+      if (this.imageStatus == true) {
+        console.log("coucou");
+        this.imageStatus = false;
+        this.imageTarget.classList.add("hidden");
+      } else {
+        console.log("cezczczc");
+        this.imageStatus = true;
+        this.imageTarget.classList.remove("hidden");
+      }
+    }
+  };
+  __publicField(index_controller_default, "targets", ["image"]);
+
   // app/javascript/controllers/index.js
+  application.register("coucou", coucou_controller_default);
   application.register("counter", counter_controller_default);
   application.register("hello", hello_controller_default);
+  application.register("index", index_controller_default);
 })();
 //# sourceMappingURL=assets/application.js.map
