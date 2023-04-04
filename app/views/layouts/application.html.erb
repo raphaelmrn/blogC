@@ -10,15 +10,12 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-
-      <%= render "layouts/sidebar" %>
-    
-  <main class="py-10 lg:pl-72">
-    <div class="px-4 sm:px-6 lg:px-8">
-      <%= yield %>
-    </div>
-  </main>
-
+  <body class='bg-zinc-300'>
+    <%= render "layouts/sidebar" %>
+    <main class="py-10 lg:pl-72">
+      <div class="px-4 sm:px-6 lg:px-8">
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,32 +1,53 @@
-<h1><%= @article.title %></h1>
 
-<h1><%= @article.title %></h1>
+  <br>
 
-<p><%= @article.body %></p>
 
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article), data: {
+
+  <ul>
+    <li><%= link_to "Edit", edit_article_path(@article) %></li>
+    <li><%= link_to "Destroy", article_path(@article), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %></li>
-</ul>
+  </ul>
+</body>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Les blogs</h2>
+      <p class="mt-2 text-lg leading-8 text-gray-600">Apprendre les bases du war en s'amusant</p>
+    </div>
+    <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <article class="flex max-w-xl flex-col items-start justify-between">
+        <div class="flex items-center gap-x-4 text-xs">
+          <time datetime="2020-03-16" class="text-gray-500">4 Avril, 2023</time>
+          <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Les bases</a>
+        </div>
+        <div class="group relative">
+          <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              <h1 class='text-center'> <%= @article.title %></h1>
+            </a>
+          </h3>
+          <p class="text-justify mt-5 line-clamp-3 text-sm leading-6 text-gray-600"><p class='text-center'><%= @article.body %></p></p>
+        </div>
+        <div class="relative mt-8 flex items-center gap-x-4">
+          <img src="data:image/jpeg;base64,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" alt="" class="h-10 w-10 rounded-full bg-gray-50">
+          <div class="text-sm leading-6">
+            <p class="font-semibold text-gray-900">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Blueblood
+              </a>
+            </p>
+            <p class="text-gray-600">Chef de JS mashallah</p>
+          </div>
+        </div>
+      </article>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+      <!-- More posts... -->
+    </div>
+  </div>
+</div>

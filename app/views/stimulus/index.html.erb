@@ -1,0 +1,41 @@
+<section class='text-center text-emerald-700'>
+    <%= content_tag(:div, "test", data: {
+    controller: "counter"
+        }) do %>
+    <%= content_tag(:p, "Tu n'as pas encore cliqué JS", data: {
+    counter_target: "output" 
+        }) %>
+    <div class='center text-center flex-col'>
+        <button class=' max-w-xl text-white bg-green-700 hover:bg-green-900 shadow-lg shadow-green-500/50 focus:ring-4 focus:ring-green-500 font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->counter#increment">
+        Cliquez ici !
+        </button>
+    </div>
+</section>
+<section>
+
+<div class="flex-justify text-right pb-8">
+        <img class='object-center' src="https://www.mamytwink.com/upload/news/2019/aout/16/guerrier-wow-classic.jpg" alt="war en action">
+    </div>
+<label class="flex items-center relative w-max cursor-pointer select-none">
+  <span class="text-lg font-bold mr-3">Toggle</span>
+  <input type="checkbox" class="appearance-none transition-colors cursor-pointer w-14 h-8 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-blue-500 bg-red-500" />
+  <span class="absolute font-medium text-xs uppercase right-1 text-black"> OFF </span>
+  <span class="absolute font-medium text-xs uppercase right-8 text-black"> ON </span>
+  <span class="w-7 h-7 right-7 absolute rounded-full transform transition-transform bg-gray-200" />
+</label>
+
+<style>
+  body {
+    background-color: #171717; /* bg-true-gray-900 */
+    color: white;
+  }
+
+  input:checked {
+    background-color: #22c55e; /* bg-green-500 */
+  }
+
+  input:checked ~ span:last-child {
+    --tw-translate-x: 1.75rem; /* translate-x-7 */
+  }
+</style>
+<% end %>

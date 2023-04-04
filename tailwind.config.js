@@ -10,7 +10,6 @@ module.exports = {
     fontFamily: {
       'sans': ['Oswald']
       },
-
       extend: {
         spacing: {
           '8xl': '96rem',
