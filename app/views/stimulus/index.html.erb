@@ -1,4 +1,5 @@
-<section class='text-center text-emerald-700'>
+<section class='text-center text-cyan-700'>
+    <h1> Ici se trouve un compteur de click, surprise à 100</h1>
     <%= content_tag(:div, "test", data: {
     controller: "counter"
         }) do %>
@@ -6,31 +7,20 @@
     counter_target: "output" 
         }) %>
     <div class='center text-center flex-col'>
-        <button class=' max-w-xl text-white bg-green-700 hover:bg-green-900 shadow-lg shadow-green-500/50 focus:ring-4 focus:ring-green-500 font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->counter#increment">
+        <button class=' max-w-xl text-white bg-cyan-700 hover:bg-cyan-900 shadow-lg shadow-cyan-500/50 focus:ring-4 focus:ring-cyan-500 font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->counter#increment">
         Cliquez ici !
         </button>
     </div>
 </section>
 
-<br>
-
 <section>
-    <div class=" inset-0 bg-gradient-to-b flex flex-col text-center items-center justify-center text-emerald-700" data-controller='index'>
-        <div class="w-auto flex justify-center items-center gap-4 pl-10">
-            <img class='object-center' src="https://www.mamytwink.com/upload/news/2019/aout/16/guerrier-wow-classic.jpg" alt="war en action" data-index-target='image'/>
-            <button class='max-w-xl text-white bg-slate-700 hover:bg-green-700 shadow-lg focus:ring-4 focus:ring-green-500 font-medium  px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->index#toggle">
+    <div class=" inset-0 bg-gradient-to-b flex flex-col text-center items-center justify-center text-cyan-700" data-controller='index'>
+        <div class="w-auto flex justify-center items-center gap-4 ">
+            <img class='object-center' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS3VUA3wBYHetmc8wsfJDAqqf_aNLbAFmUmw&usqp=CAU" alt="war en action" data-index-target='image'/>
+            <button class='max-w-xl text-white bg-slate-700 hover:bg-cyan-700 shadow-lg focus:ring-4 focus:ring-cyan-500 font-medium  px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->index#toggle">
                 Cliquez ici
             </button>
-        </div>
-        <div>
-        <h1 class="text-4xl font-[visuelt-bold-pro] mt-4">caché/pas caché</h1>
-            <p class="mt-3">
-            Cliquer pour cacher !
-            <br>
-            Recliquez pour afficher
-            </p>
-        </div>
-    </div>
+
     <style>
         body {
         background-color: #171717; /* bg-true-gray-900 */

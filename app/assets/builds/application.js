@@ -6832,11 +6832,11 @@
     }
     toggle() {
       if (this.imageStatus == true) {
-        console.log("coucou");
+        console.log("Afficher");
         this.imageStatus = false;
         this.imageTarget.classList.add("hidden");
       } else {
-        console.log("cezczczc");
+        console.log("Masquer");
         this.imageStatus = true;
         this.imageTarget.classList.remove("hidden");
       }
