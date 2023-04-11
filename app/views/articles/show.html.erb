@@ -19,10 +19,10 @@
               <h1 class='text-center'> <%= @article.title %></h1>
             </a>
           </h3>
-          <p class="text-justify mt-5 line-clamp-3 text-sm leading-6 text-gray-600"><p class='text-center'><%= @article.body %></p></p>
+          <p class="text-justify mt-5 line-clamp-3 text-sm leading-6 text-gray-600"><p class='text-center'><%= @article.body %></p>
         </div>
         <div class="relative mt-8 flex items-center gap-x-4">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/61Z5MVhX61L.jpg" alt="" class="h-10 w-10 rounded-full bg-gray-50">
+          <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/393.png" alt="" class="h-10 w-10 rounded-full bg-gray-50">
           <div class="text-sm leading-6">
             <p class="font-semibold text-gray-900">
               <a href="#">
@@ -30,17 +30,21 @@
                 Blueblood
               </a>
             </p>
-            <p class="text-gray-600">Chef de JS mashallah</p>
+            <p class="text-gray-600">novice pokémon</p>
           </div>
         </div>
         <br>
         <div class= 'text-left'>
           <ul>
+          <button class=' max-w-xl text-white bg-cyan-700 hover:bg-cyan-900 shadow-lg shadow-cyan-500/50 focus:ring-4 focus:ring-cyan-500 font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->counter#increment">
             <li><%= link_to "Edit", edit_article_path(@article) %></li>
+          </button>
+          <button class='max-w-xl text-white bg-cyan-700 hover:bg-cyan-900 shadow-lg shadow-cyan-500/50 focus:ring-4 focus:ring-cyan-500 font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->counter#increment">
             <li><%= link_to "Destroy", article_path(@article), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
         } %></li>
+        </button>
           </ul>
       </article>
 

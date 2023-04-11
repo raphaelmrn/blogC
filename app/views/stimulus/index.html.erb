@@ -1,14 +1,14 @@
 <section class='text-center text-cyan-700'>
-    <h1> Ici se trouve un compteur de click, surprise à 100</h1>
+    <h1> Ici se trouve un compteur de click</h1>
     <%= content_tag(:div, "test", data: {
     controller: "counter"
         }) do %>
-    <%= content_tag(:p, "Tu n'as pas encore cliqué JS", data: {
+    <%= content_tag(:p, "Tu n'as pas encore cliqué sur le bouton", data: {
     counter_target: "output" 
         }) %>
     <div class='center text-center flex-col'>
         <button class=' max-w-xl text-white bg-cyan-700 hover:bg-cyan-900 shadow-lg shadow-cyan-500/50 focus:ring-4 focus:ring-cyan-500 font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->counter#increment">
-        Cliquez ici !
+        Clique ici !
         </button>
     </div>
 </section>
@@ -18,7 +18,7 @@
         <div class="w-auto flex justify-center items-center gap-4 ">
             <img class='object-center' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS3VUA3wBYHetmc8wsfJDAqqf_aNLbAFmUmw&usqp=CAU" alt="war en action" data-index-target='image'/>
             <button class='max-w-xl text-white bg-slate-700 hover:bg-cyan-700 shadow-lg focus:ring-4 focus:ring-cyan-500 font-medium  px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->index#toggle">
-                Cliquez ici
+                Cliquez ici 
             </button>
 
     <style>

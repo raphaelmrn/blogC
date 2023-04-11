@@ -9,6 +9,6 @@ export default class extends Controller {
 
   increment(){
     this.count += 1;
-    this.outputTarget.textContent = `JS a cliqué sur le bouton ${this.count} fois`
+    this.outputTarget.textContent = `Tu as cliqué sur le bouton ${this.count} fois`
   }
 }

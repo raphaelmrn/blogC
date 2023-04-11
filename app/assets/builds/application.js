@@ -6812,7 +6812,7 @@
     }
     increment() {
       this.count += 1;
-      this.outputTarget.textContent = `JS a cliqu\xE9 sur le bouton ${this.count} fois`;
+      this.outputTarget.textContent = `Tu as cliqu\xE9 sur le bouton ${this.count} fois`;
     }
   };
   __publicField(counter_controller_default, "targets", ["output"]);
