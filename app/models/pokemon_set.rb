@@ -1,6 +1,5 @@
-class Set < ApplicationRecord
-    belongs_to :series
-    has_many :cards, dependent: :destroy
-    validates :name, tcg_id: true
-    validates :logo: true
+class PokemonSet < ApplicationRecord
+    belongs_to :pokemon_serie
+    has_many :pokemon_cards, dependent: :destroy
+    validates :name, presence: true
 end

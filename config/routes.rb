@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   end
   get 'blogs', to: 'articles#index'
   get 'stimulus', to: 'stimulus#index'
+  resources :pokemon_sets do
+    #resources :pokemon_cards, controller: 'pokemon_cards'
+  end
 end
 

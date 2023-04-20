@@ -1,6 +1,6 @@
 class CreateSets < ActiveRecord::Migration[7.0]
   def change
-    create_table :sets do |t|
+    create_table :pokemon_sets do |t|
       t.string :name
       t.string :tcg_id
       t.string :logo

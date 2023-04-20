@@ -1,3 +1,12 @@
-<h1>Edit Article</h1>
+<section class='bg-gradient-to-r from-slate-800 to-slate-900 h65 w34 '>
+<div class='text-center'>
+    <h1 class='text-xl text-cyan-600'>Editer un blog</h1>
+<label for="base-input" class="block mb-2 font-medium text-xl text-cyan-600 "><br>
+    <%= render "form", article: @article %>
+    <%= form_with model: @article do |form| %>
+</label>
 
-<%= render "form", article: @article %>
+    <% end %>
+</div>
+</section>
+

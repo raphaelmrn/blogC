@@ -1,4 +1,4 @@
 class PokemonSerie < ApplicationRecord
-    has_many :sets, dependent: :destroy
-    validates :name, tcg_id: true
+    has_many :pokemon_sets, dependent: :destroy
+    validates :name, :tcgId, presence: true
 end
