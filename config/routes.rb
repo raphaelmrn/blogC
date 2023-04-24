@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+  resources :pokemon_series
   get 'blogs', to: 'articles#index'
   get 'stimulus', to: 'stimulus#index'
-  resources :pokemon_sets do
-    #resources :pokemon_cards, controller: 'pokemon_cards'
-  end
+
+  #resources :pokemon_sets do
+  #resources :pokemon_cards, controller: 'pokemon_cards'
 end
 
