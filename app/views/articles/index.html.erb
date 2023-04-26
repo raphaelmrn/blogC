@@ -13,7 +13,7 @@
         <div class='text-left '>
           <p class= 'text-cyan-600 text-2xl font-bold'>
           Les blogs déja existants :</p>
-            <ul>
+            <ul style='display: flex;'>
               <% @articles.each do |article| %>
               <% unless article.archived? %>
             <li>

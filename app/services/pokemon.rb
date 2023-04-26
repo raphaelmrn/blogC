@@ -4,7 +4,7 @@ class Pokemon < ApplicationRecord
   def self.get_serie
     response = HTTParty.get('https://api.tcgdex.net/v2/fr/series')
     last_set = response.last
-    PokemonSerie.find_or_create_by(name: last_set['name'], tcgId:last_set['id'])
+    PokemonSerie.find_or_create_by(name: last_set['name'], tcgId: last_set['id'], logo: last_set.dig('logo'))
   end
 
   def self.get_sets

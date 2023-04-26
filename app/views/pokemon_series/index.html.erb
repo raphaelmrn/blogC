@@ -1,5 +1,29 @@
 <% @pokemon_series.each do |pokemon_serie| %>
-    <%= pokemon_serie.tcgId %>
-    <%= pokemon_serie.name %>
+<% pokemon_serie.tcgId %>
 
+<header class=" inset-0 bg-gradient-to-b flex flex-col text-center items-center justify-center text-emerald-700" data-controller='index' style='padding-bottom: 2%'>
+    <div class="w-auto flex justify-center items-center gap-4 ">
+        <img class='' src='https://images.p-nintendo.com/o/2020/02/5e405394d45bcf.jpg' alt='Illustration polémon'>
+    </div>
+        <h1 class='text-3xl text-center text-cyan-600'><%= pokemon_serie.name %></h1>  
+</header>
+
+<div>
+    <h2 class='text-2xl underline text-cyan-600'>Dans cette série vous retrouverez :</h2><br>
+        <section class=' text-l display flex w-auto justify-center items-center gap-4' style='margin: 14px;'>
+            <p class='text-center underline text-gray-600'>Vos cartes classiques:<img class='max-w-xs' src='https://tcg.pokemon.com/assets/img/expansions/sword-shield/cards/fr-fr/SWSH1_140.jpg' alt='classic card'></p><br>
+            <p class='text-center underline text-green-600'>Vos cartes full art<img class='max-w-xs' src='https://www.pokepedia.fr/images/7/7a/Carte_%C3%89p%C3%A9e_et_Bouclier_T%C3%A9n%C3%A8bres_Embras%C3%A9es_197.png' alt='classic card'></p><br>
+            <p class='text-center underline text-blue-500'>Vos cartes V<img class='max-w-xs' src='https://tcg.pokemon.com/assets/img/expansions/sword-shield/cards/fr-fr/SWSH1_141.jpg' alt='classic card'></p><br>
+            <p class='text-center underline text-purple-500'>Vos cartes Vstar en exclusivité<img class='max-w-xs' src='https://tcg.pokemon.com/assets/img/expansions/silver-tempest/cards/fr-fr/SWSH12_FR_136-2x.jpg' alt='classic card'></p><br>               
+            <p class='text-center underline text-orange-500'>Vos cartes Vmax en exclusivité rare<img class='max-w-xs' src='https://tcg.pokemon.com/assets/img/expansions/sword-shield/cards/fr-fr/SWSH1_142.jpg' alt='classic card'></p><br>
+        </section>
+</div>
+
+<div style='padding-top: 2%'>
+    <h3 class='text-center text-2xl underline text-cyan-600'>Cliquez ci-dessous pour acceder aux sets</h3>
+        <button class='bg-cyan-500 hover:bg-cyan-800 border-8 border-cyan-800 rounded-lg'style='display: flex; width: 100%; justify-content: center;'> 
+        <%= image_tag(pokemon_serie.logo) %>
+        <% link_to() %>
+        </button>
+<div>
 <% end %>

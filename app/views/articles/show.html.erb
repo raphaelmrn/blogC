@@ -1,4 +1,8 @@
-</body>
+<%=link_to(articles_path) do %>
+  <button class=' max-w-xl text-white bg-cyan-700 hover:bg-cyan-900 shadow-lg shadow-cyan-500/50 focus:ring-4 focus:ring-cyan-500 font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->counter#increment">
+    <p>Retour</p>
+  </button>
+<% end %>
 
 <div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -7,10 +11,10 @@
       <p class="mt-2 text-lg leading-8 text-gray-600">Découvrir les Pokémons en s'amusant</p>
     </div>
     <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-      <article class="flex max-w-xl flex-col items-start justify-between border-2 border-cyan-500">
+      <article class=" bg-slate-300 flex max-w-xl flex-col items-start justify-between border-2 border-cyan-500">
         <div class="flex items-center gap-x-4 text-xs">
-          <time datetime="2020-03-16" class="text-gray-500">4 Avril, 2023</time>
-          <a class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-300">Les bases</a>
+          <time datetime="2020-03-16" class="elative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">4 Avril, 2023</time>
+          <a class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">Les bases</a>
         </div>
         <div class="group relative">
           <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
@@ -47,7 +51,26 @@
           </button>
           </ul>
       </article>
-
+        <article class=" bg-slate-300 flex max-w-xl flex-col items-start justify-between border-2 border-cyan-500">
+          <div>
+            <h2 class='text-center text-xl underline text-cyan-600'>Ajouter un commentaire:</h2>
+            <%= form_with model: [ @article, @article.comments.build ] do |form| %>
+              <p class='text-left mt-5 line-clamp-3 leading-6 text-gray-800'>
+                <%= form.label :commenter %><br>
+                <section class=' border-4 border-cyan-400'>
+                <%= form.text_field :commenter %>
+                </section>
+              </p>
+              <p style='padding-bottom: 78%;'>
+                <%= form.label :body %><br>
+                <%= form.text_area :body %>
+              </p>
+              <button class=' max-w-xl text-white bg-cyan-700 hover:bg-cyan-900 shadow-lg shadow-cyan-500/50 focus:ring-4 focus:ring-cyan-500 font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none' data-action="click->counter#increment">
+                <%= form.submit %>
+              </button>
+            <% end %>
+          </div>
+        </article>
       <!-- pour rajouter -->
     </div>
   </div>
