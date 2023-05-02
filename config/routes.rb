@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :pokemon_series do
-    resources :pokemon_sets
+    resources :pokemon_sets do
+      resources :pokemon_cards
+    end
   end
   get 'blogs', to: 'articles#index'
   get 'stimulus', to: 'stimulus#index'

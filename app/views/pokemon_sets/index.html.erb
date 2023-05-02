@@ -1,0 +1,25 @@
+
+<header class=" inset-0 bg-gradient-to-b flex flex-col text-center items-center justify-center text-emerald-700" data-controller='index' style='padding-bottom: 2%'>
+    <div class="w-auto flex justify-center items-center gap-4 ">
+        <img class='' src='https://images.p-nintendo.com/o/2020/02/5e405394d45bcf.jpg' alt='Illustration polémon'>
+    </div>
+</header>
+
+<div style='display: flex; flex-direction: column; max-width: min-content;'>
+    <% @pokemon_sets.each do |pokemon_set| %>
+        <section class="flex flex-row justify-left">
+                <h1 class='text-3xl text-center text-cyan-600' ><%= pokemon_set.name %></h1> 
+                <% if !pokemon_set.logo.nil? %>
+                    <%= image_tag(pokemon_set.logo) %>
+                <% else pokemon_set.logo.nil? %>
+                    <%= image_tag('https://assets.pokemon.com/assets/cms2-fr-fr/img/misc/pokemon-sleep/pokemon-sleep.jpg') %>
+                <% end %>
+        </section>
+    <% end %>
+</div>
+
+
+<%= link_to pokemon_series_pokemon_set_pokemon_cards_path(pokemon_card, set_id) do %>
+    <button class='bg-cyan-500 hover:bg-cyan-800 border-8 border-cyan-800 rounded-lg'style='display: flex; width: 100%; justify-content: center;'> 
+    </button>
+<% end %>
